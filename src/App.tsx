@@ -21,19 +21,19 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="puzzle-ncsmp-page" element={<P001 />} />
-        <Route path="puzzle-ncsmp-page/fdcd-bd80-8202-9905" element={<P002 />} />
-        <Route path="puzzle-ncsmp-page/7f69-aaa4-7054-4ee6" element={<P003 />} />
-        <Route path="puzzle-ncsmp-page/7d14-3c68-ef0a-9ebf" element={<P004 />} />
-        <Route path="puzzle-ncsmp-page/nao-ta-aqui" element={<P005 />} />
-        <Route path="puzzle-ncsmp-page/1439-1d71-ecb8-d4fd" element={<P006 />} />
-        <Route path="puzzle-ncsmp-page/643f-701c-cb16-63ed" element={<P007 />} />
+        <Route path="/" element={<P001 />} />
+        <Route path="fdcd-bd80-8202-9905" element={<P002 />} />
+        <Route path="7f69-aaa4-7054-4ee6" element={<P003 />} />
+        <Route path="7d14-3c68-ef0a-9ebf" element={<P004 />} />
+        <Route path="nao-ta-aqui" element={<P005 />} />
+        <Route path="1439-1d71-ecb8-d4fd" element={<P006 />} />
+        <Route path="643f-701c-cb16-63ed" element={<P007 />} />
         <Route
-          path="puzzle-ncsmp-page/Kr4d105s25p5Rn5f46d17s2Ar3d64s2Xe4f145d66s2Kr4d75s1Ar3d54s2Ne3s23p2Ar4s2Ar3d104s24p3Rn5f146d107s27p6"
+          path="Kr4d105s25p5Rn5f46d17s2Ar3d64s2Xe4f145d66s2Kr4d75s1Ar3d54s2Ne3s23p2Ar4s2Ar3d104s24p3Rn5f146d107s27p6"
           element={<P008 />}
         />
-        <Route path="puzzle-ncsmp-page/0755-06c7-bdfe-eeda" element={<P009 />} />
-        <Route path="puzzle-ncsmp-page/descarte" element={<P010 />} />
+        <Route path="0755-06c7-bdfe-eeda" element={<P009 />} />
+        <Route path="descarte" element={<P010 />} />
       </Routes>
     </div>
   );
