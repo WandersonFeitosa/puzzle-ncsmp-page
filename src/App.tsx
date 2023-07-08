@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<P001 />} />
+        <Route path="puzzle-ncsmp-page" element={<P001 />} />
         <Route path="fdcd-bd80-8202-9905" element={<P002 />} />
         <Route path="7f69-aaa4-7054-4ee6" element={<P003 />} />
         <Route path="7d14-3c68-ef0a-9ebf" element={<P004 />} />
