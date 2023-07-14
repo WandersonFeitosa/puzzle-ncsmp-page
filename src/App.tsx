@@ -1,7 +1,8 @@
 import "./App.css";
 import "./assets/css/main.min.css";
 import { Route, Routes } from "react-router-dom";
-
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import { P001 } from "./pages/P001";
 import { P002 } from "./pages/P002";
 import { P003 } from "./pages/P003";
@@ -13,11 +14,39 @@ import { P008 } from "./pages/P008";
 import { P009 } from "./pages/P009";
 import { P010 } from "./pages/P010";
 
-// export const API_URL = "";
 export const API_URL = "https://ncsmp-api.onrender.com";
-
+// export const API_URL = "http://localhost:3000";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+  useEffect(() => {
+    let path = window.location.pathname;
+
+    if (path === "/") {
+      path = "/home";
+    }
+    const response = fetch(`${API_URL}/checkUnlocked${path}`, {})
+      .then((response) => {
+        return response.json();
+      })
+      .catch((error) => {
+        console.log(error);
+        navigate("/");
+      });
+
+    response.then((data) => {
+      const unlocked = data.unlocked;
+      if (!data || !unlocked) {
+        navigate("/");
+      }
+      setIsLoading(false);
+    });
+  }, [window.location.href, isLoading]);
+
+  if (isLoading) {
+    return <div></div>;
+  }
   return (
     <div>
       <Routes>
